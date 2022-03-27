@@ -1,0 +1,236 @@
+section, .wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper .bg_study{
+  width: 100vw;
+  height: 100vh;
+  box-sizing: content-box;
+  background: url('../contents/bg_study.jpg') no-repeat cover;
+  z-index: -1;
+  /* background-color: aquamarine; */
+}
+.wrapper .bg_play{
+  width: 100vw;
+  height: 100vh;
+  box-sizing: content-box;
+  background: url('../contents/bg_play.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.keyboard{
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  width: 800px;
+  height: 500px;
+  background: url('../contents/keyboard.png') no-repeat center;
+  background-size: 170% 150%;
+  background-position: 45%;
+  animation: keyboard 2s forwards;
+}
+@keyframes keyboard {
+  0%{
+    transform: translate(-600px);
+  }
+  100%{
+    transform: translate(0);
+    transform: rotate(-28deg);
+  }
+}
+.note{
+  position: absolute;
+  bottom: -100px;
+  right: 10px;
+  width: 700px;
+  height: 550px;
+  background: url('../contents/note.png') no-repeat center;
+  background-size: 150% 120%;
+  background-position: 45%;
+  animation: note 2s forwards;
+}
+@font-face {
+    font-family: 'HSGyeoulNoonkott20';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HSGyeoulNoonkott20.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.note .note_title{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #000;
+  top: 150px;
+  left: 320px;
+  transform: rotate(13.5deg);
+  z-index: 999;
+}
+.note .note_title div span{
+  font-size: 2em;
+  font-family: 'HSGyeoulNoonkott20';
+}
+
+@keyframes note {
+  0%{
+    opacity: 0;
+    transform: translateY(500px);
+    
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+    
+  }
+}
+.mouse{
+    position: absolute;
+    top: 50px;
+    left: 900px;
+    width: 300px;
+    height: 300px;
+    background: url('../contents/mouse.png') no-repeat center;
+    background-size: 313% 185%;
+    background-position: 50%;
+    animation: mouse 2.5s forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+@keyframes mouse {
+  0%{
+    opacity: 0;
+    transform: translate(600px, 200px);
+    
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+    transform: rotate(300deg);
+  }
+}
+.pen{
+    position: absolute;
+    bottom: -43px;
+    right: 7px;
+    width: 300px;
+    height: 300px;
+    background: url('../contents/pen.png') no-repeat center;
+    background-size: 221% 120%;
+    background-position: 50%;
+    animation: pen 2s forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+   
+}
+@keyframes pen {
+  0%{
+    opacity: 0;
+    transform: translate(600px, 200px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+    transform: rotate(123deg);
+  }
+}
+.bycle{
+  position: absolute;
+    bottom: -43px;
+    right: 7px;
+    width: 400px;
+    height: 300px;
+    background: url('../contents/bycle.png') no-repeat center;
+    background-size: cover;
+    animation: bycle 10s infinite ease-in-out;
+}
+@keyframes bycle {
+  0%{
+    transform: translate(500px);
+  }
+  50%{
+    transform: translate(0);
+  }
+  100%{
+
+    transform: translate(-2500px);
+   
+  }
+}
+.board{
+  position: absolute;
+    bottom: 0px;
+    left: 7px;
+    width: 300px;
+    height: 300px;
+    background: url('../contents/board.png') no-repeat bottom;
+    background-size: cover;
+    animation: board 2s forwards;
+}
+@keyframes board {
+  0%{
+    
+    transform: translate(500px, 300px);
+  }
+  100%{
+
+    transform: translate(100px, 150px);
+   
+  }
+}
+@font-face {
+    font-family: 'KyoboHand';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.sub_title{
+  position: absolute;
+  font-family: 'KyoboHand';
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 5px 10px 3px black;
+  font-size: 5em;
+  font-weight: 900;
+  letter-spacing: 10px;
+  top: 48%;
+  left: 48%;
+}
+.sub_title a{
+  color: #fff;
+  text-decoration: none;
+}
+.sub_title a div{
+  display: flex;
+  flex-direction: row;
+}
+
+.sub_title a div:nth-child(1) div:nth-child(1){
+  animation: font 1.5s infinite;
+  animation-direction: alternate-reverse;
+}
+.sub_title a div:nth-child(1) div:nth-child(2){
+  animation: font 2s infinite;
+  animation-direction: alternate-reverse;
+}
+.sub_title a div:nth-child(2) div:nth-child(1){
+  animation: font 2.5s infinite;
+  animation-direction: alternate-reverse;
+}
+.sub_title a div:nth-child(2) div:nth-child(2){
+  animation: font 3s infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes font {
+  0%{
+   transform: translateY(-12px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(5px);
+  }
+}

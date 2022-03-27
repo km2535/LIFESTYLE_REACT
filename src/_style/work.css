@@ -1,0 +1,151 @@
+section, .wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper .bg{
+  width: 100vw;
+  height: 100vh;
+  box-sizing: content-box;
+  background: url('../contents/bg_work.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  z-index: -1;
+  /* background-color: aquamarine; */
+}
+.man{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('../contents/human.png');
+  background-position: 0%;
+  background-size: 112%;
+  background-repeat: no-repeat;
+}
+.stand_left{
+  position: absolute;
+  top: -28px;
+  width: 100vw;
+  height: 100vh;
+  background: url('../contents/light.png');
+  background-position: 95%;
+  background-size: 147%;
+  background-repeat: no-repeat;
+  animation: stand_left 1.5s forwards;
+}
+@keyframes stand_left {
+  0%{
+    opacity: 0;
+    transform: translateX(-500px);
+    
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+    transform: rotate(356deg);
+    
+  }
+}
+.stand_right{
+  position: absolute;
+  top: 15px;
+  width: 100vw;
+  height: 100vh;
+  background: url('../contents/light2.png');
+  background-position: 800px;
+  background-size: 80%;
+  background-repeat: no-repeat;
+
+  animation: stand_right 1.5s forwards;
+}
+@keyframes stand_right {
+  0%{
+    opacity: 0;
+    transform: translateY(500px);
+    
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+    
+    
+  }
+}
+@media (max-width:1000px) {
+  .man{
+    background-position: 30%;
+     background-size: 140%;
+  }
+  .stand_left{
+    background-position: 75%;
+     background-size: 176%;
+  }
+  .stand_right{
+    background-position: 260px;
+     background-size: 115%;
+  }
+
+}
+@media (max-width:900px) {
+  .man{
+    background-position: 37%;
+     background-size: 168%;
+  }
+  .stand_left{
+    background-position: 70%;
+     background-size: 228%;
+  }
+   .stand_right{
+    top: 19px;
+    background-position: 220px;
+    background-size: 130%;
+  }
+}
+@media (max-width:700px) {
+  .man{
+    background-position: 40%;
+     background-size: 185%;
+  }
+   .stand_left{
+    background-position: 70%;
+     background-size: 228%;
+  }
+   .stand_right{
+    background-position: 122px;
+    background-size: 136%;
+    top: 58px;
+  }
+}
+@media (max-width:650px) {
+  .man{
+    background-position: 42%;
+     background-size: 240%;
+  }
+   .stand_left{
+    background-position: 63%;
+     background-size: 300%;
+  }
+   .stand_right{
+    background-position: 120px;
+    background-size: 153%;
+    top: 68px;
+  }
+}
+@media (max-width:500px) {
+  .man{
+    background-position: 42%;
+     background-size: 315%;
+  }
+   .stand_left{
+    background-position: 60%;
+     background-size: 360%;
+  }
+   .stand_right{
+   visibility: hidden;
+  }
+}
+
